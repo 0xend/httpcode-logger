@@ -1,0 +1,19 @@
+files: 
+- watcher.py
+- graphite.py
+- codeloger.py
+- helper.py
+
+To collect and send the data in the log and then keep watching for changes:
+
+./codelogger.py /var/log/challenge/example.log
+
+ The script will go through the whole log and once it's done it will keep watching. I just killed the script so it's not running right now (so the graphs have data until this moment). If the script is started, it will collect all the data, update the graph, and keep watching and updating until it's killed.
+
+ The graphs can be found at:
+
+	 http://ec2-23-20-215-47.compute-1.amazonaws.com/render?target=test.codes.1xx&height=300&width=600
+	 http://ec2-23-20-215-47.compute-1.amazonaws.com/render?target=test.codes.2xx&height=300&width=600
+	 http://ec2-23-20-215-47.compute-1.amazonaws.com/render?target=test.codes.3xx&height=300&width=600
+	 http://ec2-23-20-215-47.compute-1.amazonaws.com/render?target=test.codes.4xx&height=300&width=600
+	 http://ec2-23-20-215-47.compute-1.amazonaws.com/render?target=test.codes.5xx&height=300&width=600
